@@ -1,13 +1,15 @@
 <template>
+  <!-- Начало блока header -->
   <header>
+    <!-- Начало блока "nav" -->
     <nav id="nav">
       <router-link to="/">Home</router-link>
       <router-link to="/basket">
         <icon-basket/>
         <span>{{ number_products }}</span>
       </router-link>
-    </nav>
-  </header>
+    </nav><!-- Конец блока "nav" -->
+  </header><!-- Конец блока header -->
 </template>
 
 <script>
@@ -17,6 +19,7 @@ export default {
   name: 'HeaderPage',
   components: { IconBasket },
   computed: {
+    // Получение количества продуктов в корзине
     number_products () { return this.$store.state.basket.basket.total_amount }
   }
 }

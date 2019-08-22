@@ -15,6 +15,7 @@ export default {
     }
   },
   methods: {
+    // Добавления продукта в корзину
     addToCard () {
       const product = this.$store.state.products.products
       let selectedProduct = null

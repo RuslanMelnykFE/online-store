@@ -1,6 +1,7 @@
 export default {
   namespaced: true,
   state: {
+    // Список продуктов
     products: [
       {
         id: 29765,

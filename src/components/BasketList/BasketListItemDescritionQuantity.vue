@@ -1,9 +1,10 @@
 <template>
+  <!-- Начало блока "quantity" -->
   <p class="quantity">Количество:
     <button @click.stop.prevent="decrement" :class="{'no-active': quantity === 0}">-</button>
     <span>{{ quantity }}</span>
     <button @click.stop.prevent="increment">+</button>
-  </p>
+  </p><!-- Конец блока "quantity" -->
 </template>
 
 <script>
@@ -20,11 +21,13 @@ export default {
     }
   },
   methods: {
+    // Увеличение количества одного наименования продукта
     increment () {
       let quantity = this.quantity
       quantity += 1
       this.$store.dispatch('basket/changesQuantityProduct', { id: this.product_id, quantity: quantity })
     },
+    // Уменьшение количества одного наименования продукта
     decrement () {
       let quantity = this.quantity
       if (quantity !== 0) quantity -= 1

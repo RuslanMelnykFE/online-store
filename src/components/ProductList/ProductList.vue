@@ -1,8 +1,8 @@
 <template>
+  <!-- Начало блока "product_list" -->
   <ul class="product_list">
-    <product-list-item v-for="(item, index) in product_list" :key="index"
-                       :product="item"/>
-  </ul>
+    <product-list-item v-for="(item, index) in product_list" :key="index" :product="item"/>
+  </ul><!-- Конец блока "product_list" -->
 </template>
 
 <script>
@@ -12,6 +12,7 @@ export default {
   name: 'ProductList',
   components: { ProductListItem },
   computed: {
+    // Получение списка продуктов
     product_list () { return this.$store.state.products.products }
   }
 }

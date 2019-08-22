@@ -1,11 +1,12 @@
 <template>
+  <!-- Начало блока "basket_list--item"-->
   <li class="basket_list__item">
     <figure>
       <img :src="product.image_link" :alt="product.title">
     </figure>
 
     <product-description :product="product" :quantity="quantity"/>
-  </li>
+  </li><!-- Конец блока "basket_list--item"-->
 </template>
 
 <script>

@@ -1,14 +1,16 @@
 <template>
+  <!-- Начало блока "product_list__item" -->
   <li class="product_list__item">
     <figure>
       <img :src="product.image_link" :alt="product.title">
     </figure>
+    <!-- Начало блока "product_list__item__description" -->
     <div class="product_list__item__description">
       <h4>{{ product.title }}</h4>
       <p>{{ product.price }}</p>
       <button-add :product_id="product.id"/>
-    </div>
-  </li>
+    </div><!-- Конец блока "product_list__item__description" -->
+  </li><!-- Конец блока "product_list__item" -->
 </template>
 
 <script>

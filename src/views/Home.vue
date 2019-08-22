@@ -6,13 +6,10 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import ProductList from '@/components/ProductList/ProductList.vue'
 
 export default {
   name: 'home',
-  components: {
-    ProductList
-  }
+  components: { ProductList }
 }
 </script>
