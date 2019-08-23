@@ -75,6 +75,7 @@ export default {
       localStorage.setItem('basket', JSON.stringify(state.basket))
     },
 
+    // Изменение количества одного наименования продукта
     changesQuantityProduct ({ state, commit, dispatch }, changes) {
       const basket = state.basket.basket_list
       const changeQuantityProduct = changeQuantity(basket, changes.id, changes.quantity)
@@ -86,9 +87,7 @@ export default {
     // Удалить продукт из корзины
     deleteProduct ({ state, commit, dispatch }, id) {
       const basket = state.basket.basket_list
-      const filterBasket = basket.filter(elem => {
-        return elem.product.id !== id
-      })
+      const filterBasket = basket.filter(elem => elem.product.id !== id)
       commit('changeBasketList', filterBasket)
       dispatch('recount')
       localStorage.setItem('basket', JSON.stringify(state.basket))
